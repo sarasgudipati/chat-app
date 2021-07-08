@@ -2,16 +2,16 @@ import {Grid,Paper, Avatar,Typography,TextField,Button} from '@material-ui/core'
 import {useState} from 'react';
 import AddCircleOutlinedIcon from '@material-ui/icons/AddCircleOutlined';
 
-const Login = () =>{
+const Login = ({handleChange}) =>{
 
     const paperStyle ={
-        padding: '30px 20px',
+        padding: 20,
+        height:'81vh',
         width : 300,
-        margin : '90px',
-        float : 'right',
+        margin : '0 auto',
         textAlign : 'center'
     }
-    const marginTopStyle = {marginTop:5}
+    const marginTopStyle = {marginTop:10}
     const headerStyle = {margin : '0',fontFamily:'Georgia'}
     const avtarStyle = {backgroundColor : '#1769aa'}
 
@@ -26,7 +26,7 @@ const Login = () =>{
 
     return(
         <Grid>
-            <Paper elevation ={20} style = {paperStyle}>
+            <Paper style = {paperStyle}>
             <Grid align='center'>
                 <Avatar style={avtarStyle}>
                     <AddCircleOutlinedIcon/>
@@ -55,8 +55,10 @@ const Login = () =>{
                     value={password}
                     onChange = {(e)=>setPassword(e.target.value)}
                     />
-                    <Button style={marginTopStyle} type="submit" variant="contained" color="primary">LogIn</Button>
+                    <Button style={marginTopStyle} type="submit"  variant="contained" color="primary">
+                    LogIn</Button>
                 </form>
+                <Typography>Do you have an accout? <a href='#' onClick = {(e)=>handleChange("event",1)}>SignUp</a></Typography>
             </Paper>
         </Grid>
     )

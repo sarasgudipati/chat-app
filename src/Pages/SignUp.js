@@ -26,10 +26,9 @@ const SignUp = ()=>{
     let today = new Date();
     const todayDate =today.getFullYear()+'-'+today.getMonth()+'-'+today.getDate();
     const paperStyle ={
-        padding: '30px 20px',
+        padding: 20,
         width : 300,
-        margin : '90px',
-        float : 'right',
+        margin : '0 auto',
         textAlign : 'center'
     }
     const marginTopStyle = {marginTop:5}
@@ -37,7 +36,7 @@ const SignUp = ()=>{
     const avtarStyle = {backgroundColor : '#1769aa'}
     return(
         <Grid>
-            <Paper elevation ={20} style = {paperStyle}>
+            <Paper style = {paperStyle}>
             <Grid align='center'>
                 <Avatar style={avtarStyle}>
                     <AddCircleOutlinedIcon/>
